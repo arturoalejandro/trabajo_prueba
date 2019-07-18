@@ -1,4 +1,5 @@
-
-from hdfs.ext.kerberos import KerberosClient
-client = InsecureClient('http://elaawoanaa02.risorse.enel::8888')
-client.list("/")
+from pyhive import hive
+conn = hive.connect('<Hive Server 2>', port=10000)
+cursor = conn.cursor()
+cursor.execute('SHOW DATABASES')
+cursor.fetchall()
