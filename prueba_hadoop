@@ -1,3 +1,4 @@
 
 from hdfs.ext.kerberos import KerberosClient
 client = InsecureClient('http://elaawoanaa02.risorse.enel::8888')
+client.list("/")
